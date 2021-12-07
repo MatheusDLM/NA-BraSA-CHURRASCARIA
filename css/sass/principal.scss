@@ -1,0 +1,24 @@
+$marrom_escuro: #391005;
+$marrom_claro: #ae986F;
+$laranja_claro: #9F492F;
+$laranja_maisclaro: #ffae58;
+$laranja_escuro: #c94118;
+$amarelo: #f0db00;
+$amarelo_escuro: #f1c70a;
+$vermelho: #d82822;
+$vermelho_claro: #731819;
+$vermelho_escuro: #7E1819;
+$branco: #f4f1cb;
+$preto: #242424;
+
+// Fontes
+
+$fonte_principal: 'Lobster', cursive;
+$fonte_texto: Arial;
+
+// Imports
+@import 'cabecalho_redessociais';
+@import 'corpo';
+@import 'cabecalho_principal';
+@import 'menu';
+@import 'cardapio';
