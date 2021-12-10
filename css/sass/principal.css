@@ -353,4 +353,27 @@ navbar-background {
   outline: 1-px solid #f1c70a;
   outline-offset: -0.8rem;
 }
+
+.sobre-conteudo h1 {
+  color: #f1c70a;
+}
+
+.sobre-conteudo h2 {
+  font-family: Arial;
+  color: #f4f1cb;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.fotos-churrascaria {
+  -webkit-transform: rotate(3deg);
+          transform: rotate(3deg);
+  padding-top: 50px;
+}
+
+.fotos-churrascaria img {
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 /*# sourceMappingURL=principal.css.map */

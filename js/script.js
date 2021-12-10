@@ -49,7 +49,19 @@ $(document).ready(function(){
             }
             }
         ]
-    })
+    });
+
+    //Carrosel de imagens churrascaria
+    $('.fotos-churrascaria').slick({
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        infinite: true,
+        speed: 500,
+        arrows: false,
+        fade: true,
+        cssEase: 'linear'
+    });
     
 
 })
