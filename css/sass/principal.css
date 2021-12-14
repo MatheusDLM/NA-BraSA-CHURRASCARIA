@@ -427,9 +427,11 @@ navbar-background {
 }
 
 .equipe .foto img {
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
+  width: 101%;
+  height: 101%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 30%;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: all 0.9s ease 0s;
@@ -481,6 +483,146 @@ navbar-background {
 
 .equipe .contatos li {
   display: inline-block;
+  padding: 10px 20px;
+  font-size: 17px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.equipe .contatos li a {
+  color: #391005;
+  text-decoration: none;
+}
+
+.equipe .contatos li:hover {
+  background: #391005;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.equipe .contatos li:hover a {
+  color: #f1c70a;
+}
+
+.recomendacao-item {
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+          clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+}
+
+.recomendacao-item img {
+  width: 150px;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 30px;
+}
+
+.recomendacao-nome {
+  color: #f4f1cb;
+  font-family: "Lobster", cursive;
+}
+
+.recomendacao-texto {
+  font-family: Arial;
+  text-align: justify;
+}
+
+#recomendacoes h1 {
+  font-family: "Lobster", cursive;
+  color: #f4f1cb;
+}
+
+.mapa iframe {
+  min-height: 60vh;
+  border-radius: 5px;
+  width: 100%;
+  margin-left: 20px;
+}
+
+#contato .cartao {
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#contato .cartao:hover {
+  background: rgba(84, 33, 37, 0.4);
+}
+
+#contato .cartao-cabecalho {
+  color: #f4f1cb;
+  font-family: "Lobster", cursive;
+}
+
+#contato .input-group-text {
+  background: #391005;
+  border-color: #391005;
+  color: #f1c70a;
+}
+
+#contato .cartao input {
+  color: #391005;
+  border: none;
+}
+
+#contato .cartao input::-webkit-input-placeholder {
+  color: #ae986F;
+  font-style: italic;
+}
+
+#contato .cartao input:-ms-input-placeholder {
+  color: #ae986F;
+  font-style: italic;
+}
+
+#contato .cartao input::-ms-input-placeholder {
+  color: #ae986F;
+  font-style: italic;
+}
+
+#contato .cartao input::placeholder {
+  color: #ae986F;
+  font-style: italic;
+}
+
+#contato .cartao textarea::-webkit-input-placeholder {
+  color: #ae986F;
+  font-style: italic;
+  text-align: center;
+}
+
+#contato .cartao textarea:-ms-input-placeholder {
+  color: #ae986F;
+  font-style: italic;
+  text-align: center;
+}
+
+#contato .cartao textarea::-ms-input-placeholder {
+  color: #ae986F;
+  font-style: italic;
+  text-align: center;
+}
+
+#contato .cartao textarea::placeholder {
+  color: #ae986F;
+  font-style: italic;
+  text-align: center;
+}
+
+.contato-btn {
+  color: #f1c70a;
+  background: #391005;
+  border-color: #f1c70a;
+  -webkit-transition: all 0.5 ease-in-out;
+  transition: all 0.5 ease-in-out;
+}
+
+.contato-btn:hover {
+  background: #f1c70a;
+  border-color: #391005;
   color: #391005;
 }
 /*# sourceMappingURL=principal.css.map */

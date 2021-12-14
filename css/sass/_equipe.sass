@@ -12,6 +12,7 @@
     margin-bottom: 50px
     position: relative
     z-index: 1
+    
 
 .equipe .foto:before
     content: ""
@@ -41,9 +42,10 @@
     z-index: -1
 
 .equipe .foto img
-    width: 100%
-    height: auto
-    border-radius: 50%
+    width: 101%
+    height: 101%
+    object-fit: cover
+    border-radius: 30%
     transform: scale(1)
     transition: all 0.9s ease 0s
 
@@ -83,4 +85,18 @@
 
 .equipe .contatos li
     display: inline-block
+    padding: 10px 20px
+    font-size: 17px
+    transition: all 0.3s ease 0s
+
+.equipe .contatos li a
     color: $marrom_escuro
+    text-decoration: none
+
+.equipe .contatos li:hover
+    background: $marrom_escuro
+    text-decoration: none
+    cursor: pointer
+
+.equipe .contatos li:hover a
+    color: $amarelo_escuro
