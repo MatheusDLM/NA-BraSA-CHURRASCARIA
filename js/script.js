@@ -66,11 +66,8 @@ $(document).ready(function(){
     // Fixar menu de navegação no topo
     $(window).scroll(function(){
         let position = $(this).scrollTop();
-
-
-        console.log(position)
         
-        if(position >= 584) {
+        if(position >= 826) {
             $('.navbar').addClass('navbar-background');
             $('.navbar').addClass('fixed-top');
         } else {
@@ -78,6 +75,27 @@ $(document).ready(function(){
             $('.navbar').removeClass('fixed-top');
 
         }
+    });
+
+    //Botão seta voltar ao topo
+    $(window).scroll(function(){
+        let position = $(this).scrollTop();
+
+        if(position >= 826){
+            $('#voltar-topo').addClass('scrollTop');
+        } else {
+            $('#voltar-topo').removeClass('scrollTop');  
+        }
+    });
+
+    //Suavizar o scroll para navegação
+    $('.nav-item a, header-link, .btn-adiante, .navbar-brand, #pedir-agora, #voltar-topo').click(function(link){
+        link.preventDefault();
+        let target = $(this).attr('href');
+
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top - 25
+        }, 1000);
     })
     
 

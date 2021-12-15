@@ -8,7 +8,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NA BRASA &bull; CHURRASCARIA</title>
+    <title>Churras &bull; Papis</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -46,7 +46,7 @@
                     <a href="#" class="mr-2" alt="whatswapp"><i class="fab fa-whatsapp-square fa-2x"></i></a>
                 </div>
                 <h2 id="logo" class="p-2 text-capitalize">
-                    <a href="#" title="Voltar ao inicio">Salvador, BA</a>
+                    <a href="#" title="Voltar ao inicio">Birmingham</a>
                 </h2>
             </div>
         </div>
@@ -60,17 +60,18 @@
                 <div class="col">
                     <div class="banner text-center">
                         <h1 class="display-1 text-capitalize w47 mx-auto">
-                            <small>Tem</small>
-                            <strong>Rodízio</strong>
+                            <small>Churras</small>
+                            <strong>Papis</strong>
                         </h1>
 
-                        <a href="#" class="btn pedir-btn my-2 text-capitalize" class="trigger-btn" data-toggle="modal">Faça seu pedido</a>
+                        <a data-bs-target="#pedidoModal" class="btn pedir-btn my-2 text-capitalize" class="trigger-btn" data-bs-toggle="modal">Faça seu pedido</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <a href="#" class="btn btn-adiante"><i class="fas fa-arrow-down" alt="Ir para próxima página."></i></a>
+        <a href="#cardapio" class="btn btn-adiante"><i class="fas fa-arrow-down" alt="Ir para próxima página."></i></a>
+
     </header>
 
 
@@ -87,18 +88,18 @@
 
         <div class="collapse navbar-collapse" id="minhaNavBar">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Cardápio</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Sobre</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Recomendações</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Equipe</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Cozinha</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-capitalize">Contatos</a></li>
+                <li class="nav-item"><a href="#icones-topo" class="nav-link text-capitalize">Home</a></li>
+                <li class="nav-item"><a href="#cardapio" class="nav-link text-capitalize">Cardápio</a></li>
+                <li class="nav-item"><a href="#sobre" class="nav-link text-capitalize">Sobre</a></li>
+                <li class="nav-item"><a href="#equipe" class="nav-link text-capitalize">Equipe</a></li>
+                <li class="nav-item"><a href="#cozinha" class="nav-link text-capitalize">Cozinha</a></li>
+                <li class="nav-item"><a href="#recomendacoes" class="nav-link text-capitalize">Recomendações</a></li>
+                <li class="nav-item"><a href="#contato" class="nav-link text-capitalize">Contatos</a></li>
                
             </ul>
 
             <form class="form-inline d-none d-lg-block mr-5">
-                <a href="#" class="btn nav-btn text-capitalize" class="trigger-btn" data-toggle="modal">Pedir agora</a>
+                <a data-bs-target="#pedidoModal" class="btn nav-btn text-capitalize" class="trigger-btn" data-bs-toggle="modal">Pedir agora</a>
             </form>
         </div>
     </nav>
@@ -486,9 +487,11 @@
     </section>
 
     <!-- Rodapé -->
-     
-    <div class="container-fluid p-2 info" id="icones-topo">
-        <div class="d-flex">
+
+    <footer>
+
+        <div class="container-fluid p-2 info" id="icones-topo">
+            <div class="d-flex">
             <div class="col d-flex justify-content-center justify-content-md-between justify-content-sm-beetween align-items-baseline flex-wrap">
                 <div class="p-2 info-icones">
                     <a href="#" class="mr-2" alt="facebook"><i class="fab fa-facebook-square fa-2x"></i></a>
@@ -497,14 +500,49 @@
                     <a href="#" class="mr-2" alt="whatswapp"><i class="fab fa-whatsapp-square fa-2x"></i></a>
                 </div>
                 <h2 id="logo" class="p-2 text-capitalize">
-                    <a href="#" title="Voltar ao inicio">Salvador, BA</a>
+                    <a href="#" title="Voltar ao inicio">Birmingham</a>
                 </h2>
             </div>
         </div>
     </div>
+    
+    <a href="#icones-topo" id="voltar-topo" class="p-1" title="Voltar ao inicio"><i class="fas fa-arrow-circle-up fa-3x"></i></a>
 
+    </footer> 
 
+    <!-- Pedido Modal -->
+    
+    <div class="modal fade" id="pedidoModal" aria-hidden="true">
+        <div class="modal-dialog modal-pedido">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div class="avatar">
+                    <img src="/assets/pedir.png" alt="Pedidos">
+                </div>
+                <h4 class="modal-title">Pedido Online</h4>
+                <button type="button" class="btn" data-bs-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="nome" placeholder="Digite o seu nome..." required>
+                    </div>
 
+                    <div class="form-group">
+                        <textarea class="form-control" name="pedido" placeholder="O que você quer pedir?" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="pedir" class="btn btn-lg btn-block login-btn">Pedir</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+    
+    
 
 
 
